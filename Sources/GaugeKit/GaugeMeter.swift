@@ -85,14 +85,14 @@ private struct GaugeMask: View {
 		Circle()
 			.trim(from: CGFloat(trimStart), to: CGFloat(trimEnd))
 			.stroke(style: StrokeStyle(lineWidth: CGFloat(meterThickness),
-																 lineCap: .round))
+                                       lineCap: .butt))
 			.padding(CGFloat(meterThickness))
 	}
 }
 
 struct GaugeComponents_Previews: PreviewProvider {
 	static var previews: some View {
-		let colors: [Color] = [.red, .orange, .yellow, .green]
-		GaugeView(title: "Speed", value: 88, colors: colors)
+        let colors: [Color] = [.red, .orange, .yellow, .green, .yellow, .orange, .red]
+		GaugeView(title: "Balance", value: 88, colors: colors)
 	}
 }
